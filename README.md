@@ -1,6 +1,36 @@
-# Substreams Skills
+# Substreams Preflight
 
-Agent Skills for Substreams development - open-source expertise packages for AI assistants.
+Preflight validation for AI-generated Substreams projects.
+
+This is a Continuity extension of [`streamingfast/substreams-skills`](https://github.com/streamingfast/substreams-skills). It keeps the upstream skills and adds a small mechanical guard before build or deployment:
+
+- rejects incomplete intent contracts and unsupported chains;
+- detects critical The Graph `EntityChanges` wire-tag mistakes that still pass `substreams build` and `substreams graph`.
+
+## Quick start
+
+```bash
+npm ci
+npm run preflight -- \
+  --intent examples/graph-out-preflight.intent.json \
+  --project examples/T3.2-cross-dex-volume
+```
+
+Before generating a project, agents record confirmed requirements in `substreams.intent.json`:
+
+```json
+{
+  "chain": "ethereum-mainnet",
+  "target": "ERC-721 contracts",
+  "data": "mint events",
+  "destination": "The Graph / graph_out",
+  "range": "18000000-18000100"
+}
+```
+
+Run preflight before `substreams build`. It supports Ethereum/EVM and Solana; it rejects other chains rather than inventing a scaffold.
+
+## Upstream skills
 
 ## What is this?
 

@@ -1,0 +1,7 @@
+{
+  "chain": "ethereum-mainnet",
+  "target": "Uniswap V2 and V3 pools",
+  "data": "daily swap volume",
+  "destination": "The Graph / graph_out",
+  "range": "18000000-18000100"
+}

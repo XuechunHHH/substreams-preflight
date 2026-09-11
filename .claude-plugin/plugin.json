@@ -1,13 +1,13 @@
 {
-  "name": "substreams",
-  "description": "Agent skills for Substreams development — build, debug, and deploy high-performance blockchain data indexing and transformation on EVM, Solana, and NEAR chains.",
+  "name": "substreams-preflight",
+  "description": "Preflight validation for AI-generated Substreams projects: reject incomplete or unsupported intent and Graph EntityChanges wire-tag errors before build or deployment.",
   "version": "1.6.0",
   "author": {
     "name": "StreamingFast",
     "email": "info@streamingfast.io"
   },
   "homepage": "https://docs.substreams.dev",
-  "repository": "https://github.com/streamingfast/substreams-skills",
+  "repository": "https://github.com/XuechunHHH/substreams-preflight",
   "license": "Apache-2.0",
   "keywords": [
     "substreams",

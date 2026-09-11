@@ -1,23 +1,21 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "streamingfast-substreams",
-  "description": "StreamingFast Substreams agent skills for Claude Code — expert knowledge for developing, testing, and deploying high-performance blockchain data indexing on any EVM, Solana, NEAR, or other blockchains.",
+  "name": "substreams-preflight",
+  "description": "Preflight validation extension for AI-generated Substreams projects.",
   "owner": {
-    "name": "StreamingFast",
-    "email": "info@streamingfast.io"
+    "name": "XuechunHHH"
   },
   "plugins": [
     {
-      "name": "substreams-dev",
+      "name": "substreams-preflight",
       "source": "./",
-      "description": "Agent skills for Substreams development — build, debug, and deploy high-performance blockchain data indexing and transformation on EVM, Solana, NEAR and other blockchains using Rust modules and protobuf schemas.",
+      "description": "Validate AI-generated Substreams intent and critical Graph EntityChanges wire tags before build or deployment.",
       "category": "development",
       "author": {
-        "name": "StreamingFast",
-        "email": "info@streamingfast.io"
+        "name": "XuechunHHH"
       },
       "homepage": "https://docs.substreams.dev",
-      "repository": "https://github.com/streamingfast/substreams-skills",
+      "repository": "https://github.com/XuechunHHH/substreams-preflight",
       "license": "Apache-2.0",
       "keywords": ["substreams", "blockchain", "indexing", "ethereum", "solana", "rust", "protobuf", "web3", "streaming"]
     }
