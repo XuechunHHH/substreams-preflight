@@ -17,8 +17,8 @@ dist/
 
 # Node modules (if any)
 node_modules/
+.substreams.env
 
 # Temp files
 *.tmp
 .cache/
-
