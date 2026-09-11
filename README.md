@@ -34,6 +34,8 @@ Run preflight before `substreams build`. It supports Ethereum/EVM and Solana; it
 
 The exact one-prompt demo is preserved in [`demo/usdc-transfers-graph-out/PROMPT.md`](./demo/usdc-transfers-graph-out/PROMPT.md), with its generated project beside it.
 
+Demo video: https://youtu.be/fbZ5ezZKsOs
+
 Published package:
 
 ```text

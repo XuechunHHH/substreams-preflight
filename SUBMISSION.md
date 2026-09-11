@@ -16,7 +16,7 @@ Pool: **Continuity**
 
 - Repository: https://github.com/XuechunHHH/substreams-preflight
 - Published package: https://substreams.dev/packages/substreams-preflight-demo-xh/v0.1.0
-- Demo video: `VIDEO_URL`
+- Demo video: https://youtu.be/fbZ5ezZKsOs
 
 ## Problem
 
