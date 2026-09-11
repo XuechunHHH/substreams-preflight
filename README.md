@@ -30,6 +30,28 @@ Before generating a project, agents record confirmed requirements in `substreams
 
 Run preflight before `substreams build`. It supports Ethereum/EVM and Solana; it rejects other chains rather than inventing a scaffold.
 
+## Published demo
+
+The exact one-prompt demo is preserved in [`demo/usdc-transfers-graph-out/PROMPT.md`](./demo/usdc-transfers-graph-out/PROMPT.md), with its generated project beside it.
+
+Published package:
+
+```text
+substreams-preflight-demo-xh@v0.1.0
+```
+
+Run the published `graph_out` module against live Ethereum data:
+
+```bash
+. ./.substreams.env
+substreams run substreams-preflight-demo-xh@v0.1.0 graph_out \
+  -s 18000000 \
+  -t +1 \
+  -o jsonl
+```
+
+The published package resolves from the Substreams registry and emits canonical `UsdcTransfer` `EntityChanges`.
+
 ## Upstream skills
 
 ## What is this?

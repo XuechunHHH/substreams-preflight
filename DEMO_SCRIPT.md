@@ -73,19 +73,20 @@ substreams build
 cd ../..
 ```
 
-Load the local credential and process 100 Ethereum blocks:
+Load the local credential and run the published registry package:
 
 ```bash
 . ./.substreams.env
-substreams run demo/usdc-transfers-graph-out/substreams.yaml graph_out \
+substreams info substreams-preflight-demo-xh@v0.1.0
+substreams run substreams-preflight-demo-xh@v0.1.0 graph_out \
   -s 18000000 \
-  -t +100 \
+  -t +1 \
   -o jsonl
 ```
 
 Point to the emitted `EntityChanges`, then say:
 
-> This `graph_out` pipeline has built successfully and processed 100 live Ethereum blocks. Preflight adds the missing contract check before build or deployment.
+> This `graph_out` pipeline was generated from the recorded prompt, passed preflight, was published to the Substreams registry, and is now emitting live Ethereum data from the published package.
 
 ## 2:40–3:00 — Close
 

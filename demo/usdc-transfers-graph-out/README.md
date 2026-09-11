@@ -40,3 +40,15 @@ substreams run ./substreams.yaml graph_out \
 ```
 
 The stop block is exclusive, so this command processes blocks 18,000,000 through 18,000,100.
+
+## Published Package
+
+Version `v0.1.0` is published in the Substreams registry:
+
+```bash
+substreams info substreams-preflight-demo-xh@v0.1.0
+substreams run substreams-preflight-demo-xh@v0.1.0 graph_out \
+  --start-block 18000000 \
+  --stop-block +1 \
+  --output jsonl
+```
