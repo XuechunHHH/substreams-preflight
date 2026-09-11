@@ -127,6 +127,30 @@ Once the chain is known, **load and follow** `substreams-ethereum` or `substream
 
 **If the prompt is concrete and complete**, skip the checklist and build immediately.
 
+## Mechanical preflight
+
+Before generating a project, record the confirmed requirements in `substreams.intent.json`:
+
+```json
+{
+  "chain": "ethereum-mainnet",
+  "target": "ERC-721 contracts",
+  "data": "mint events",
+  "destination": "The Graph / graph_out",
+  "range": "18000000-18000100"
+}
+```
+
+Do not create this file by guessing missing values. Ask the required single clarification first. This guard supports Ethereum/EVM and Solana only; reject or request an authoritative integration reference for another chain.
+
+Before `substreams build`, run:
+
+```bash
+npm run preflight -- --intent substreams.intent.json --project .
+```
+
+For `graph_out`, this verifies the critical `EntityChanges.entity_changes = 5` and `Field.new_value = 3` wire tags that normal build/graph validation does not catch. If it fails, fix the declared contract before building; do not deploy.
+
 ## Discovering Existing Packages (Registry Search API)
 
 **Before building from scratch, search the registry — an existing package may already index the data you need.** Public, no auth required.

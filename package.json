@@ -3,7 +3,9 @@
   "version": "1.6.0",
   "description": "Agent Skills for Substreams development",
   "scripts": {
-    "validate": "node scripts/simple-validate.js"
+    "validate": "node scripts/simple-validate.js",
+    "preflight": "node scripts/substreams-preflight.js",
+    "test:preflight": "node scripts/test-substreams-preflight.js"
   },
   "dependencies": {
     "js-yaml": "^4.1.0"
