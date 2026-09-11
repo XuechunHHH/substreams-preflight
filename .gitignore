@@ -15,7 +15,7 @@ target/
 *.spkg
 buf.gen.yaml
 Cargo.lock
-src/pb/
+**/src/pb/
 
 # Logs
 *.log
