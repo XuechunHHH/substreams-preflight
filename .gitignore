@@ -27,3 +27,5 @@ node_modules/
 # Temp files
 *.tmp
 .cache/
+video/*.mp4
+video/*-frames/
