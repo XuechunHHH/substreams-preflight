@@ -1,0 +1,40 @@
+specVersion: v0.1.0
+
+package:
+  name: substreams_preflight_demo_xh
+  version: v0.1.0
+  url: https://github.com/XuechunHHH/substreams-preflight
+  description: USDC transfers on Ethereum mainnet as typed records and canonical Graph entities
+
+network: mainnet
+
+protobuf:
+  files:
+    - usdc_transfers.proto
+    - entity.proto
+  importPaths:
+    - ./proto
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: ./target/wasm32-unknown-unknown/release/substreams_preflight_demo_xh.wasm
+
+modules:
+  - name: map_usdc_transfers
+    kind: map
+    initialBlock: 18000000
+    inputs:
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:demo.usdc.v1.UsdcTransfers
+    doc: Decodes USDC ERC-20 Transfer events into typed records without RPC calls.
+
+  - name: graph_out
+    kind: map
+    initialBlock: 18000000
+    inputs:
+      - map: map_usdc_transfers
+    output:
+      type: proto:sf.substreams.sink.entity.v1.EntityChanges
+    doc: Emits canonical UsdcTransfer EntityChanges keyed by transaction hash and log index.

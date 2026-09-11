@@ -1,0 +1,23 @@
+[workspace]
+
+[package]
+name = "substreams_preflight_demo_xh"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+hex-literal = "0.4"
+prost = "0.13"
+substreams = "0.7"
+substreams-ethereum = "0.11"
+
+[build-dependencies]
+prost-build = "0.13"
+
+[profile.release]
+lto = true
+opt-level = "s"
+strip = "debuginfo"

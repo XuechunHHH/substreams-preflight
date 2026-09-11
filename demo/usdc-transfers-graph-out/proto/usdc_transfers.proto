@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package demo.usdc.v1;
+
+message UsdcTransfers {
+  repeated UsdcTransfer transfers = 1;
+}
+
+message UsdcTransfer {
+  string from = 1;
+  string to = 2;
+  string amount = 3;
+  string tx_hash = 4;
+  uint64 log_index = 5;
+  uint64 block_number = 6;
+}
